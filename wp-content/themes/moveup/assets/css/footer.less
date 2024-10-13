@@ -1,5 +1,7 @@
-
-
+footer {
+  margin-top: -10px;
+  position: relative;
+}
 
 .footer-top {
   background-color: #040040;
@@ -11,11 +13,22 @@
   display: flex;
   justify-content: space-between;
 
+  @media screen and (max-width: @responsive-1280) {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
   .footer-menu {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: end;
+
+    @media screen and (max-width: @responsive-1280) {
+      align-items: center;
+    }
 
     ul {
       margin: 30px 0 0 0;
@@ -23,6 +36,10 @@
       display: flex;
       gap: 40px;
       align-items: center;
+
+      @media screen and (max-width: @responsive-840) {
+        flex-direction: column;
+      }
 
       li {
         list-style: none;
@@ -44,6 +61,10 @@
 
     ul.social-media {
       gap: 30px;
+
+      @media screen and (max-width: @responsive-840) {
+        flex-direction: row;
+      }
 
       li {
         transition: transform 0.5s;

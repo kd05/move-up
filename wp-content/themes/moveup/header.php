@@ -28,31 +28,36 @@
 
 
 <!--Header Start-->
-<header>
-    <div class="container">
-        <div class="navbar">
-            <div class="brand-name">
-                <a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo.svg" /></a>
-            </div>
-<!--            <ul>-->
-<!--                <li><a href="#">Students</a></li>-->
-<!--                <li><a href="adults.php">Adults</a></li>-->
-<!--                <li><a href="get-involved.php">Get Involved</a></li>-->
-<!--                <li><a href="about.php">About</a></li>-->
-<!--                <li><a href="bulletin.php">Bulletin</a></li>-->
-<!--            </ul>-->
+<nav class="nav-bar">
+	<div class="container">
+		<input type="checkbox" id="drop-down-cbox"/>
+		<label for="drop-down-cbox">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
 
-            <?php
+		<div class="site-logo">
+        <a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo.svg" /></a>
+        </div>
+
+		<!-- <ul class="main-nav small-caps">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul> -->
+        <?php
             $args = array(
                 'container' => false,
                 'theme_location' => 'main-nav',
             );
             wp_nav_menu( $args );
             ?>
+		
+	</div>
+</nav>
 
-        </div>
-    </div>
-</header>
+
 <!--Header End-->
 
 <!--Wrapper Start-->

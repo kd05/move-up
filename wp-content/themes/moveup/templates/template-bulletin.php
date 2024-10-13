@@ -32,7 +32,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/news-image.jpg" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -44,7 +44,7 @@ get_header();
                         <img class="hover-img" src="<?php echo get_template_directory_uri() ;?>/assets/images/news-hover.png" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -56,7 +56,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/news-image.jpg" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -69,7 +69,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/news-hover.png" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -81,7 +81,7 @@ get_header();
                         <img class="hover-img" src="<?php echo get_template_directory_uri() ;?>/assets/images/news-image.jpg" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -93,7 +93,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/news-hover.png" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -106,7 +106,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/news-image.jpg" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -118,7 +118,7 @@ get_header();
                         <img class="hover-img" src="<?php echo get_template_directory_uri() ;?>/assets/images/news-hover.png" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -130,7 +130,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/news-image.jpg" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -143,7 +143,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/news-hover.png" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -155,7 +155,7 @@ get_header();
                         <img class="hover-img" src="<?php echo get_template_directory_uri() ;?>/assets/images/news-image.jpg" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -167,7 +167,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/news-hover.png" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>

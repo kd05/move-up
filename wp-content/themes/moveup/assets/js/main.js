@@ -31,10 +31,10 @@ jQuery(document).ready(function ($) {
    ***************************************************/
 
     // Get the modal
-    var modal = document.getElementById("myModal");
+    var modal = document.getElementById("myModal1");
 
     // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+    var btn = document.getElementById("myBtn1");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -55,5 +55,8 @@ jQuery(document).ready(function ($) {
             modal.style.display = "none";
         }
     }
+
+
+
 
 });

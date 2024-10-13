@@ -19,7 +19,7 @@ get_header();
 
     <?php $top_content = get_field('top_content'); ?>
     <!--Purpal Section Start-->
-    <section class="bg-purpal">
+    <section class="bg-purpal large-content-block">
         <div class="container"  data-aos="fade-up">
 <!--            <p class="fs-24 text-white paragraph-block">-->
 <!--                Trying to figure out where you fit in the modern workplace? That’s where we can help. At MoveUp, we’ll provide free, personalized career assessment and one-on-one coaching with an expert. We’ll uncover your strengths, find your hope, your purpose, and explore how they align with available opportunities in today’s job market. Don’t just wait for an opportunity to come your way; MoveUp!-->
@@ -70,9 +70,9 @@ get_header();
                     $sa_button_link = $sa_single['button_link'];
                     ?>
                     <div class="card text-black text-center"
-                         data-aos="<?php echo ($index % 2 == 0) ? 'fade-right' : 'fade-left'; ?>">
+                         data-aos="<?php echo ($index % 2 == 0) ? 'fade-up' : 'fade-up'; ?>">
                         <h2><?php echo $sa_title; ?></h2>
-                        <p class="fs-16"><?php echo $sa_info; ?></p>
+                        <p><?php echo $sa_info; ?></p>
                         <a href="<?php echo $sa_button_link; ?>" class="btn"><?php echo $sa_button_text; ?></a>
                     </div>
                 <?php } ?>
@@ -118,7 +118,7 @@ get_header();
     <!--News Section Start-->
     <section class="bg-white">
         <div class="container" data-aos="fade-up">
-            <h1 class="text-blue">MoveUp News</h1>
+            <h1>MoveUp News</h1>
             <div class="news-block">
                 <?php  if ($featured_posts) {
                     foreach ($featured_posts as $featured_post_id) {
@@ -136,7 +136,7 @@ get_header();
                                 <img src="<?php echo $featured_image ;?>" />
                             </div>
                             <div class="card-content bg-gray">
-                                <h4 class="text-blue mb-0"><?php echo $featured_post_title ;?></h4>
+                                <h4><?php echo $featured_post_title ;?></h4>
                                 <a href="<?php echo $featured_post_permalink ;?>" class="btn">
                                     <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                                 </a>

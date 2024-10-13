@@ -1,32 +1,296 @@
-header {
-    background: #040040;
+// header {
+//     background: #040040;
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-    }
+//     .navbar {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+
+//     ul {
+//         margin: 0;
+//         padding: 0;
+//         display: flex;
+//         align-items: center;
+
+//         li {
+//             list-style: none;
+//             padding: 20px;
+
+//             a {
+//                 color: #fff;
+//                 font-size: 18px;
+//                 font-weight: 700;
+//                 transition: 0.3s;
+
+//                 &:hover {
+//                     color: #0DFFE2;
+
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #040040;
+    z-index: 99;
+
+
 
     ul {
-        margin: 0;
-        padding: 0;
+        flex-grow: 1;
         display: flex;
+        justify-content: end;
         align-items: center;
+        gap: 40px;
 
-        li {
-            list-style: none;
-            padding: 20px;
+        @media screen and (max-width: @responsive-1280) {
+            padding-right: 40px;
+        }
+    }
 
-            a {
-                color: #fff;
-                font-size: 18px;
-                font-weight: 700;
-                transition: 0.3s;
+    ul li {
+        display: block;
+        text-align: center;
 
-                &:hover {
-                    color: #0DFFE2;
+        a {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            transition: 0.3s;
 
-                }
+            &:hover {
+                color: #0DFFE2;
+
             }
         }
     }
+
+    ul li a,
+    ul li span {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    ul li>ul {
+        max-height: 0px;
+        /* max-height instead of height, height can't transition to auto */
+        transition: all 500ms ease-in-out;
+        overflow: hidden;
+        /* make it so nav doesn't show beyond the 0px max-height */
+    }
+
+    ul li:hover>ul {
+        max-height: 180px;
+        /* height x how many links */
+        height: auto;
+    }
+
+    ul li>ul li a,
+    ul li>ul li span {
+        background-color: #0a0557;
+    }
+
+    ul li>ul li a:hover,
+    ul li>ul li span:hover {
+        background-color: #0a0557;
+        color: white;
+        border-bottom: none;
+    }
 }
+
+.nav-bar .container {
+    display: flex;
+    align-items: center;
+    /* vertically center */
+    height: 100%;
+}
+
+/* Hide checkbox that controls Mobile Nav Button*/
+#drop-down-cbox {
+    display: none;
+}
+
+/* Mobile Nav Button */
+#drop-down-cbox+label {
+    position: absolute;
+    display: none;
+    width: 60px;
+    height: 60px;
+    right: 0;
+    overflow: hidden;
+    background-color: transparent;
+    transition: all 300ms ease-in-out;
+}
+
+/* Mobile Nav Button Bars */
+#drop-down-cbox+label span {
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    width: 34px;
+    height: 4px;
+    border-radius: 2px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* centering trick */
+    transition: all 300ms ease-in-out;
+}
+
+/* Mobile Nav Button Bars Invididually */
+#drop-down-cbox+label span:nth-child(1) {
+    top: 35%;
+    /* evenly spaced */
+}
+
+#drop-down-cbox+label span:nth-child(2) {
+    top: 50%;
+    /* evenly spaced */
+}
+
+#drop-down-cbox+label span:nth-child(3) {
+    top: 65%;
+    /* evenly spaced */
+}
+
+/* Mobile Nav Button Styling for Checked */
+#drop-down-cbox:checked+label {
+    background-color: #0a0557;
+}
+
+#drop-down-cbox:checked+label span {
+    background-color: white;
+}
+
+/* Transform the bars into an 'X' */
+#drop-down-cbox:checked+label span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* center, then rotate */
+}
+
+#drop-down-cbox:checked+label span:nth-child(2) {
+    left: -150%;
+    /* move center bar out of the picture */
+}
+
+#drop-down-cbox:checked+label span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    /* center, then rotate */
+}
+
+/* Main Nav Desktop */
+
+
+/* Tablet and Mobile View */
+@media (max-width: 768px) {
+
+    // .site-logo {
+    //     font-size: 1.5rem;
+    //     flex-grow: 1;
+    //     text-align: center;
+    // }
+
+    #drop-down-cbox+label {
+        display: block;
+        /* unhide the mobile nav button */
+    }
+
+    .nav-bar {
+        ul {
+            max-height: 0px;
+            /* same vertical grow transition trick as above */
+            height: calc(100vh - 60px);
+            /* take full vertical viewport height, -60px for nav-bar */
+            overflow: hidden;
+            position: absolute;
+            top: 70px;
+            line-height: auto;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            background-color: #0a0557;
+            transition: all 500ms ease-in-out;
+            display: block;
+            padding: 0;
+
+            li {
+                padding: 20px 0;
+                background-color: #040040;
+            }
+        }
+
+
+        ul li span {
+            position: relative;
+        }
+
+        /* design and position downward arrow */
+        ul li span:after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            position: absolute;
+            top: 50%;
+            margin-top: -2px;
+            margin-left: 8px;
+            transform: translateY(-50%) rotate(-45deg);
+            border-left: 2px solid #666;
+            border-bottom: 2px solid #666;
+        }
+
+        ul li a:hover,
+        ul li span:hover {
+            background-color: #040229;
+            color: #fff;
+            border-bottom: none;
+        }
+
+        ul li>ul li {
+            position: relative;
+        }
+
+        ul li>ul li a,
+        ul li>ul li span {
+            background-color: #eee;
+        }
+    }
+
+
+
+    #drop-down-cbox:checked~ul {
+        max-height: calc(100vh - 60px);
+        transition: all 500ms ease-in-out;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: @responsive-1280) {}
+
+@media screen and (max-width: @responsive-1024) {}
+
+@media screen and (max-width: @responsive-760) {}
+
+@media screen and (max-width: @responsive-760) {}
+
+@media screen and (max-width: @responsive-960) {}
+
+
+@media screen and (max-width: @responsive-550) {}

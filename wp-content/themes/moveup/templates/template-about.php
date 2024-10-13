@@ -23,30 +23,30 @@ get_header();
 
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
-
+<div id="myModal1" class="modal">
   <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close"></span>
-    <h1 class="text-blue">About Pam</h1>
-    <p class="fs-20 mb-35">Fueled by a desire to help young people find their place in the world of work, Pam has spent the past 15 years helping high school students and young adults discover their talents, interests and launch a career.  She has been able to focus on this work during her time with the Associated General Contractors of Northwest Ohio, the Toledo Regional Chamber of Commerce and as an independent contractor. Prior to her time in workforce development, she worked in the fields of non-profit fundraising and journalism. </p>
-    <p class="fs-20">With MoveUp Ohio, she covers Lucas, Wood, Fulton, Henry, Williams and Defiance Counties. She lives with her family in South Toledo and is a proud Scout & marching band mom. She serves as a member of the Scouts BSA Erie Shores Council Executive Board as Vice President of Administration.</p>
-    <div class="text-center"><a href="" class="btn">CLOSE</a></div>
+    <div class="modal-content">
+        <span class="close"></span>
+        <h1>About Pam</h1>
+        <p>Fueled by a desire to help young people find their place in the world of work, Pam has spent the past 15 years helping high school students and young adults discover their talents, interests and launch a career.  She has been able to focus on this work during her time with the Associated General Contractors of Northwest Ohio, the Toledo Regional Chamber of Commerce and as an independent contractor. Prior to her time in workforce development, she worked in the fields of non-profit fundraising and journalism. </p>
+        <p>With MoveUp Ohio, she covers Lucas, Wood, Fulton, Henry, Williams and Defiance Counties. She lives with her family in South Toledo and is a proud Scout & marching band mom. She serves as a member of the Scouts BSA Erie Shores Council Executive Board as Vice President of Administration.</p>
+        <div class="text-center"><a href="" class="btn">CLOSE</a></div>
+    </div>
 </div>
 
-</div>
+
     <!--News Section Start-->
     <section class="bg-gray">
         <div class="container" data-aos="fade-up">
-            <h1 class="text-blue text-center">Meet the Team</h1>
-            <div class="news-block meet-block pointer" id="myBtn">
-                <div class="card">
+            <h1>Meet the Team</h1>
+            <div class="news-block meet-block pointer">
+                <div class="card" id="myBtn1">
                     <div class="card-img-block">
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/team-1.png" />
                     </div>
                     <div class="card-content bg-white">
-                        <h5 class="text-blue mb-0 ">Pam Mohler</h5>
-                        <p class="fs-16 fw-normal text-blue">Lucas | Wood | Fulton | Henry
+                        <h5>Pam Mohler</h5>
+                        <p>Lucas | Wood | Fulton | Henry
                             Williams | Defiance</p>
                         <a href="mailto:pamm@futureplans.org" class="link-btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/mail-icon.svg" /> pamm@futureplans.org
@@ -61,8 +61,8 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/team-2.png" />
                     </div>
                     <div class="card-content bg-white">
-                        <h5 class="text-blue mb-0 ">Taylor Robinson</h5>
-                        <p class="fs-16 fw-normal text-blue">Erie | Huron | Ottawa | Sandusky <br>
+                        <h5>Taylor Robinson</h5>
+                        <p>Erie | Huron | Ottawa | Sandusky <br>
                             Lorraine</p>
                         <a href="mailto:taylorr@futureplans.org" class="link-btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/mail-icon.svg" /> taylorr@futureplans.org
@@ -77,8 +77,8 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/team-3.png" />
                     </div>
                     <div class="card-content bg-white">
-                        <h5 class="text-blue mb-0 ">Employee Name</h5>
-                        <p class="fs-16 fw-normal text-blue">Counties Served | Counties Served | Counties Served | Counties Served</p>
+                        <h5>Employee Name</h5>
+                        <p>Counties Served | Counties Served | Counties Served | Counties Served</p>
                         <a href="mailto:email@email.com" class="link-btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/mail-icon.svg" /> email@email.com
                         </a>
@@ -96,19 +96,19 @@ get_header();
     <section class="bg-light-purpal">
         <div class="container">
             <div class="partner-box bg-white text-center">
-                <h1 class="text-blue">Partners</h1>
+                <h1>Partners</h1>
                 <div class="partner-card-item">
                     <div class="card">
-                        <h2 class="text-blue"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo1.png" /></h2>
+                        <h2><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo1.png" /></h2>
                     </div>
                     <div class="card">
-                        <h2 class="text-blue"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo2.png" /></h2>
+                        <h2><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo2.png" /></h2>
                     </div>
                     <div class="card">
-                        <h2 class="text-blue"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo3.png" /></h2>
+                        <h2><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo3.png" /></h2>
                     </div>
                     <div class="card">
-                        <h2 class="text-blue"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo4.png" /></h2>
+                        <h2><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo4.png" /></h2>
                     </div>
                 </div>
                 <a href="" class="btn">View all partners</a>
@@ -121,7 +121,7 @@ get_header();
     <!--News Section Start-->
     <section class="bg-white">
         <div class="container" data-aos="fade-up">
-            <h1 class="text-blue">Projects & News</h1>
+            <h1>Projects & News</h1>
             <div class="news-block">
                 <div class="card">
                     <div class="card-img-block">
@@ -129,7 +129,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/news-image.jpg" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -141,7 +141,7 @@ get_header();
                         <img class="hover-img" src="<?php echo get_template_directory_uri() ;?>/assets/images/news-hover.png" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
@@ -153,7 +153,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/news-image.jpg" />
                     </div>
                     <div class="card-content bg-gray">
-                        <h4 class="text-blue mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h4>
                         <a href="" class="btn">
                             <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
                         </a>
