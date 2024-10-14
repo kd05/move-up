@@ -15,20 +15,18 @@ get_header();
     ?>
 
     <!--Get Free Career Today Section Start-->
-    <section class="image-content-section pb-0" data-aos="fade-up">
-        <img src="<?php echo get_template_directory_uri() ;?>/assets/images/adults-image.jpg" />
-            <div class="image-content-block">
+    <section class="image-content-section" data-aos="fade-up">
+        <div class="img-bg" style="background-image: url(<?php echo get_template_directory_uri() ;?>/assets/images/adults-image.jpg)"> </div>
+        <div class="image-content-block">
                 <h1>Get a Free Career <br /> Assessment and Move Up</h1>
                 <p>It can be tough to find a job out there, especially if you’re unsure of what it is you want to do. That’s where we come in. At MoveUp, we’ll provide free, personalized career assessment and one-on-one coaching with an expert. All to uncover your strengths and explore how they align with available opportunities in today’s job market. Don’t just sit there hoping something good comes along; Move Up!</p>
             </div>
-        
     </section>
     <!--Get Free Career Today Section End-->
 
 
 
     <!--Future Today Section Start-->
-    <section class="bg-white">
         <div class="container">
             <div class="purple-content-box" data-aos="fade-up">
                 <div class="card text-black text-center w-100">
@@ -38,7 +36,6 @@ get_header();
                 </div>
             </div>
         </div>
-    </section>
     <!--Future Today Section End-->
 
 

@@ -29,7 +29,7 @@ get_header();
 
     <!--Get Free Career Today Section Start-->
         <section class="image-content-section bg-white">
-                <img src="<?php echo get_template_directory_uri() ;?>/assets/images/career-ready-img.png" />
+                <div class="img-bg" style="background-image: url(<?php echo get_template_directory_uri() ;?>/assets/images/career-ready-img.png)"> </div>
                 <div class="image-content-block">
                     <h1>Career Ready</h1>
                     <p>The MoveUp Project has many resources to aid your school in developing career-ready students upon graduation. Most schools begin with the Future Plans career assessment and coaching process as a way to start developing a career plan for every student. MoveUp also can support schools with the development and execution of career days, career exploration class curriculum, summer workforce training, and the embedding of industry credentials (Ohio graduation points) into classes.</p>
@@ -41,7 +41,7 @@ get_header();
 
     <!--Get Free Career Today Section Start-->
         <section class="image-content-section bg-gray">
-            <img src="<?php echo get_template_directory_uri() ;?>/assets/images/jobs-services-img.png" />
+            <div class="img-bg" style="background-image: url(<?php echo get_template_directory_uri() ;?>/assets/images/jobs-services-img.png)"> </div>
             <div class="image-content-block">
                 <h1>Jobs Services</h1>
                 <p>The process starts when participants take the career assessment and discover training options, career pathways, and their customized results during coaching. The MoveUp Project offers more by way of job shadowing, work experience, and internships. We work with schools, organizations, and businesses to ensure students have the tools necessary to plan their next steps.</p>
@@ -53,7 +53,7 @@ get_header();
 
     <!--Get Free Career Today Section Start-->
         <section class="image-content-section bg-white">
-            <img src="<?php echo get_template_directory_uri() ;?>/assets/images/students-intership-img.png" />
+            <div class="img-bg" style="background-image: url(<?php echo get_template_directory_uri() ;?>/assets/images/students-intership-img.png)"> </div>
             <div class="image-content-block">
                 <h1>Student Internships</h1>
                 <p>The MoveUp project works to connect students to great mentorship, shadow and internship opportunities with local businesses and organizations. (Students who show aptitude and interest in PR and IT may be interested in our own marketing internship program). These experiences allow students the opportunity to learn new skills, work as part of a team, and in some cases, earn money as they take their initial steps into a career.</p>
@@ -65,7 +65,7 @@ get_header();
 
     <!--Get Free Career Today Section Start-->
         <section class="image-content-section bg-gray">
-            <img src="<?php echo get_template_directory_uri() ;?>/assets/images/collabration-img.png" />
+            <div class="img-bg" style="background-image: url(<?php echo get_template_directory_uri() ;?>/assets/images/collabration-img.png)"> </div>
             <div class="image-content-block">
                 <h1>Collaboration</h1>
                 <p>The MoveUp Project collaborates with schools, organizations, and businesses to increase <br> opportunities for growth in the lives of individuals and in the community.  Through partnerships in the <br> community  we are able to offer training, credentials, experience, and  <br>employment opportunities.</p>

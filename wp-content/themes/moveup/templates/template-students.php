@@ -23,9 +23,8 @@ get_header();
 
 
     <!--Future Today Section Start-->
-    <section class="bg-white">
         <div class="container">
-            <div class="purple-content-box">
+            <div class="purple-content-box purple-content-box-student">
                 <div class="card text-black text-center w-100">
                     <h1>Start Your Future Today</h1>
                     <p>Not sure what’s next for you? No worries. We will figure it out together. You’ll start by taking a career assessment then have a one-on-one session with a career coach. In the end, you will understand your strengths and how they map into the modern world of work.</p>
@@ -33,13 +32,12 @@ get_header();
                 </div>
             </div>
         </div>
-    </section>
     <!--Future Today Section End-->
 
 
     <!--Get Free Career Today Section Start-->
         <section class="bg-gray image-content-section">
-                <img src="<?php echo get_template_directory_uri() ;?>/assets/images/school-administrator.png" />
+                <div class="img-bg" style="background-image: url(<?php echo get_template_directory_uri() ;?>/assets/images/school-administrator.png)"> </div>
                 <div class="image-content-block">
                     <h1>School Administrators</h1>
                     <p>Our mission is to build community solutions for workforce growth and sustainability. Most importantly, we work with all students, especially those who may need extra support. Learn how we can work together to show everyone their strengths and what’s possible.</p>
@@ -51,7 +49,7 @@ get_header();
     <!--Get Free Career Today Section Start-->
         <section class="bg-white summer-program-block">
             <div class="image-content-section">
-                <img src="<?php echo get_template_directory_uri() ;?>/assets/images/summary-program.png" />
+                <div class="img-bg" style="background-image: url(<?php echo get_template_directory_uri() ;?>/assets/images/summary-program.png)"> </div>
                 <div class="image-content-block">
                     <h1>Summer Programs</h1>
                     <p>The MoveUp Summer Programs aim to empower upcoming and graduating high school seniors by offering workforce credential certifications and internship/job placement opportunities. Our goal is to provide students with short-term training and certified workforce credentials that align with sought-after industries, enabling them to be well-prepared for additional postsecondary education and training or a direct transition into the workforce.</p>
