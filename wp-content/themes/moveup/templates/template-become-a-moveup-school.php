@@ -12,7 +12,7 @@ get_header();
     <!--Banner Section Start-->
     <div class="inner-bg">
         <div class="container">
-            <div class="text-blue inner-banner-caption moveup-school-banner">
+            <div class="text-blue inner-banner-caption inner-blue-text-banner">
                 <h1>Become a MoveUp School</h1>
                 <p>MoveUp uses the Future Plans career assessment and coaching process, which can be implemented flexibly to meet the needs of your school. We will work with you and individual students to understand how the data can help identify career pathways and make decisions about career technical education, College Credit Plus, and/or obtain industry credentials</p>
                 <p>All our staff are trained by Future Plans, a non-profit organization that focuses on workforce development. Our career assessment, individualized coaching and data analysis have been proven to work throughout the state.</p>
@@ -21,6 +21,10 @@ get_header();
     </div>
     <!--Banner Section End-->
 
+    <?php
+    //        Top Banner Image
+    top_image_pages_html();
+    ?>
 
 
     <!--Get Free Career Today Section Start-->

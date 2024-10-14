@@ -980,8 +980,11 @@ a.btn:hover {
   color: #fff;
   line-height: 32px;
 }
-.moveup-school-banner h1,
-.moveup-school-banner p {
+.inner-banner-caption p:last-child {
+  margin-bottom: 0px;
+}
+.inner-blue-text-banner h1,
+.inner-blue-text-banner p {
   color: #040040;
 }
 .inner-bg-small {

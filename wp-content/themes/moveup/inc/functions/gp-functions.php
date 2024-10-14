@@ -62,12 +62,19 @@ function top_image_pages_html(){
         get_default_image('inner-page-banner');
 
     $top_image_content = get_field('top_image_content');
+    $is_purple_container = get_field('is_purple_container');
+
+    $banner_class = $is_purple_container ? "text-blue inner-banner-caption inner-blue-text-banner"
+                : "text-white inner-banner-caption";
+
+    $banner_image = $is_purple_container ?  "" : $banner_image;
 
     ?>
     <!--Banner Section Start-->
     <div class="inner-bg" style="background-image: url(<?php echo esc_url($banner_image); ?>)">
         <div class="container">
-            <div class="text-white inner-banner-caption" data-aos="fade-up">
+
+            <div class="<?php echo $banner_class; ?>" data-aos="fade-up">
                 <?php echo $top_image_content; ?>
             </div>
         </div>
