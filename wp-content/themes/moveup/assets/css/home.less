@@ -503,11 +503,23 @@ a.btn {
   width: 495px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding-left: 200px;
+  // padding-left: 200px;
 
-  @media screen and (max-width: @responsive-960) {
+  @media screen and (max-width: @responsive-1280) {
+    margin-left: -40px;
+    width: 90%;
+  }
+
+  @media screen and (max-width: @responsive-700) {
+    margin-left: -40px;
+    width: 500px;
+    background-size: cover;
+  }
+
+  @media screen and (max-width: @responsive-500) {
     margin-left: -40px;
     width: 100%;
+    height: 340px;
     background-size: cover;
   }
 }
