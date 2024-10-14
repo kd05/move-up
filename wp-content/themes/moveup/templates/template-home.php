@@ -61,22 +61,24 @@ get_header();
     <!--Students Adults Section Start-->
     <section class="bg-white">
         <div class="container">
-            <div class="purple-content-box">
+            <div class="two-box">
+                <div class="purple-content-box">
 
-                <?php foreach ($students_adults as $index => $sa_single) {
-                    $sa_title = $sa_single['title'];
-                    $sa_info = $sa_single['info'];
-                    $sa_button_text = $sa_single['button_text'];
-                    $sa_button_link = $sa_single['button_link'];
-                    ?>
-                    <div class="card text-black text-center"
-                         data-aos="<?php echo ($index % 2 == 0) ? 'fade-up' : 'fade-up'; ?>">
-                        <h2><?php echo $sa_title; ?></h2>
-                        <p><?php echo $sa_info; ?></p>
-                        <a href="<?php echo $sa_button_link; ?>" class="btn"><?php echo $sa_button_text; ?></a>
-                    </div>
-                <?php } ?>
+                    <?php foreach ($students_adults as $index => $sa_single) {
+                        $sa_title = $sa_single['title'];
+                        $sa_info = $sa_single['info'];
+                        $sa_button_text = $sa_single['button_text'];
+                        $sa_button_link = $sa_single['button_link'];
+                        ?>
+                        <div class="card text-black text-center"
+                            data-aos="<?php echo ($index % 2 == 0) ? 'fade-up' : 'fade-up'; ?>">
+                            <h2><?php echo $sa_title; ?></h2>
+                            <p><?php echo $sa_info; ?></p>
+                            <a href="<?php echo $sa_button_link; ?>" class="btn"><?php echo $sa_button_text; ?></a>
+                        </div>
+                    <?php } ?>
 
+                </div>
             </div>
         </div>
     </section>

@@ -30,32 +30,69 @@ jQuery(document).ready(function ($) {
    *             Modal
    ***************************************************/
 
-    // Get the modal
-    var modal = document.getElementById("myModal1");
+    // var modal = document.getElementById("myModal1");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn1");
+    // var btn = document.getElementById("myBtn1");
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    // var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
+    // btn.onclick = function () {
+    //     modal.style.display = "block";
+    // }
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
+    // span.onclick = function () {
+    //     modal.style.display = "none";
+    // }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+    // window.onclick = function (event) {
+    //     if (event.target == modal) {
+    //         modal.style.display = "none";
+    //     }
+    // }
+
+
+
+
+    const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
+    const modals = document.querySelectorAll(".modal");
+    const modalCloseButtons = document.querySelectorAll(".modal-close");
+
+    modalTriggerButtons.forEach(elem => {
+        elem.addEventListener("click", event => toggleModal(event.currentTarget.getAttribute("data-modal-target")));
+    });
+    modalCloseButtons.forEach(elem => {
+        elem.addEventListener("click", event => toggleModal(event.currentTarget.closest(".modal").id));
+    });
+    modals.forEach(elem => {
+        elem.addEventListener("click", event => {
+            if (event.currentTarget === event.target) toggleModal(event.currentTarget.id);
+        });
+    });
+
+    // Maybe also close with "Esc"...
+    document.addEventListener("keydown", event => {
+        if (event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
+            toggleModal(document.querySelector(".modal.modal-show").id);
+        }
+    });
+
+    function toggleModal(modalId) {
+        const modal = document.getElementById(modalId);
+
+        if (getComputedStyle(modal).display === "flex") { // alternatively: if(modal.classList.contains("modal-show"))
+            modal.classList.add("modal-hide");
+            setTimeout(() => {
+                document.body.style.overflow = "initial"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown - in this case: "initial" <=> "visible"
+                modal.classList.remove("modal-show", "modal-hide");
+                modal.style.display = "none";
+            }, 200);
+        }
+        else {
+            document.body.style.overflow = "hidden"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown
+            modal.style.display = "flex";
+            modal.classList.add("modal-show");
         }
     }
-
 
 
 

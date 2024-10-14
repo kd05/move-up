@@ -23,15 +23,40 @@ get_header();
 
 
 <!-- The Modal -->
-<div id="myModal1" class="modal">
-  <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close"></span>
-        <h1>About Pam</h1>
+
+
+<div class="modal-wrapper">
+  <div class="modal" id="modal1"> <!-- This is the background overlay -->
+    <div class="modal-content"> <!-- This is the actual modal/popup box -->
+      <h1>Pam Mohler</h1>
         <p>Fueled by a desire to help young people find their place in the world of work, Pam has spent the past 15 years helping high school students and young adults discover their talents, interests and launch a career.  She has been able to focus on this work during her time with the Associated General Contractors of Northwest Ohio, the Toledo Regional Chamber of Commerce and as an independent contractor. Prior to her time in workforce development, she worked in the fields of non-profit fundraising and journalism. </p>
         <p>With MoveUp Ohio, she covers Lucas, Wood, Fulton, Henry, Williams and Defiance Counties. She lives with her family in South Toledo and is a proud Scout & marching band mom. She serves as a member of the Scouts BSA Erie Shores Council Executive Board as Vice President of Administration.</p>
-        <div class="text-center"><a href="" class="btn">CLOSE</a></div>
+        <div class="text-center">
+        <span class="modal-close btn">Close</span>
+        </div>
     </div>
+  </div>
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <h1>Taylor Robinson</h1>
+        <p>Fueled by a desire to help young people find their place in the world of work, Pam has spent the past 15 years helping high school students and young adults discover their talents, interests and launch a career.  She has been able to focus on this work during her time with the Associated General Contractors of Northwest Ohio, the Toledo Regional Chamber of Commerce and as an independent contractor. Prior to her time in workforce development, she worked in the fields of non-profit fundraising and journalism. </p>
+        <p>With MoveUp Ohio, she covers Lucas, Wood, Fulton, Henry, Williams and Defiance Counties. She lives with her family in South Toledo and is a proud Scout & marching band mom. She serves as a member of the Scouts BSA Erie Shores Council Executive Board as Vice President of Administration.</p>
+        <div class="text-center">
+        <span class="modal-close btn">Close</span>
+        </div>
+    </div>
+  </div>
+  <div class="modal" id="modal3">
+    <div class="modal-content">
+      <h1>Employee Name</h1>
+        <p>Fueled by a desire to help young people find their place in the world of work, Pam has spent the past 15 years helping high school students and young adults discover their talents, interests and launch a career.  She has been able to focus on this work during her time with the Associated General Contractors of Northwest Ohio, the Toledo Regional Chamber of Commerce and as an independent contractor. Prior to her time in workforce development, she worked in the fields of non-profit fundraising and journalism. </p>
+        <p>With MoveUp Ohio, she covers Lucas, Wood, Fulton, Henry, Williams and Defiance Counties. She lives with her family in South Toledo and is a proud Scout & marching band mom. She serves as a member of the Scouts BSA Erie Shores Council Executive Board as Vice President of Administration.</p>
+        <div class="text-center">
+        <span class="modal-close btn">Close</span>
+        </div>
+       
+    </div>
+  </div>
 </div>
 
 
@@ -40,7 +65,7 @@ get_header();
         <div class="container" data-aos="fade-up">
             <h1>Meet the Team</h1>
             <div class="news-block meet-block pointer">
-                <div class="card" id="myBtn1">
+                <div class="card" data-modal-target="modal1">
                     <div class="card-img-block">
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/team-1.png" />
                     </div>
@@ -56,7 +81,7 @@ get_header();
                         </a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-modal-target="modal2">
                     <div class="card-img-block">
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/team-2.png" />
                     </div>
@@ -72,7 +97,7 @@ get_header();
                         </a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-modal-target="modal3">
                     <div class="card-img-block">
                         <img src="<?php echo get_template_directory_uri() ;?>/assets/images/team-3.png" />
                     </div>

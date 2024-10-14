@@ -95,6 +95,14 @@ a.btn {
   }
 }
 
+.two-box {
+  display: flex;
+
+  .purple-content-box {
+    align-items: normal;
+  }
+}
+
 .purple-content-box {
   display: flex;
   justify-content: space-between;
@@ -107,6 +115,7 @@ a.btn {
     background: #CBBAFF;
     padding: 100px 70px;
     width: 600px;
+    flex: 1;
 
     @media screen and (max-width: @responsive-1280) {
       width: 48%;
@@ -736,46 +745,6 @@ ul.pagination-block {
 
 
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 100px;
-  border: 1px solid #888;
-  width: 1230px;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
 
 /*Article Block CSS Start*/
 .article-bio-block {
@@ -962,10 +931,11 @@ ul.social-media-panel {
       left: 0;
       width: 30px;
       height: 30px;
-      background: #040040;
+      background: #8400ff;
       border-radius: 10px;
-      outline: 2px solid #040040;
+      outline: 2px solid #8400ff;
       transition: all 0.2s ease;
+      flex: none;
     }
 
     // .checkbox:hover .checkmark {
@@ -1135,3 +1105,149 @@ ul.social-media-panel {
 
 
 @media screen and (max-width: @responsive-550) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal-wrapper {
+  button {
+    margin: 0.75rem;
+    padding: 0.25rem;
+    cursor: pointer;
+  }
+
+  /* Modal */
+  .modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    /* or center */
+    z-index: 1000;
+    /* depending on what z-index values exist in your page, in order for the modal layer to sit on top of other content */
+    overflow: auto;
+    /* enable scrolling if needed - although this is not really necessary since we are going take care of overflow in modal-content */
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal.modal-show {
+    animation: fadeIn 0.1s ease-in-out forwards;
+  }
+
+  .modal.modal-hide {
+    animation: fadeOut 0.1s ease-in-out 0.1s forwards;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    width: 50%;
+    max-height: 75%;
+    overflow: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .modal.modal-show .modal-content {
+    animation: fadeInDown 0.3s ease-in-out forwards;
+  }
+
+  .modal.modal-hide .modal-content {
+    animation: fadeOutUp 0.2s ease-in-out forwards;
+  }
+
+  .modal-content h1 {
+    margin-bottom: 35px;
+  }
+
+
+  .modal-close {
+    cursor: pointer;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOutUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+  }
+
+  @media(max-width: 992px) {
+    html {
+      font-size: 14px;
+    }
+
+    .modal-content {
+      width: 80%;
+    }
+  }
+
+  @media(max-width:767px) {
+    html {
+      font-size: 12px;
+    }
+
+    .modal-content {
+      padding: 2rem 1rem 1rem 1rem;
+      width: 90%;
+    }
+
+    .modal-content h1 {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

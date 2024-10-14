@@ -69,6 +69,10 @@
             font-weight: 700;
             transition: 0.3s;
 
+            @media screen and (max-width: @responsive-840) {
+                padding: 20px 0;
+            }
+
             &:hover {
                 color: #0DFFE2;
 
@@ -216,7 +220,7 @@
             /* same vertical grow transition trick as above */
             height: calc(100vh - 60px);
             /* take full vertical viewport height, -60px for nav-bar */
-            overflow: hidden;
+            overflow-x: auto;
             position: absolute;
             top: 70px;
             line-height: auto;
@@ -228,10 +232,7 @@
             display: block;
             padding: 0;
 
-            li {
-                padding: 20px 0;
-                background-color: #040040;
-            }
+
         }
 
 
