@@ -464,6 +464,9 @@ p {
   font-weight: 400;
   color: #000;
 }
+p:last-child {
+  margin-bottom: 0;
+}
 h1,
 h2,
 h4 {
@@ -690,6 +693,9 @@ a.btn:hover {
 .two-box .purple-content-box {
   align-items: normal;
 }
+.purple-content-box-student {
+  padding-top: 100px;
+}
 .purple-content-box {
   display: flex;
   justify-content: space-between;
@@ -697,6 +703,7 @@ a.btn:hover {
   background: #fff;
   gap: 30px;
   flex-wrap: wrap;
+  margin-bottom: 100px;
 }
 .purple-content-box .card {
   background: #CBBAFF;
@@ -1007,6 +1014,23 @@ a.btn:hover {
   .summer-program-block .image-content-section {
     flex-direction: column;
     align-items: start;
+  }
+}
+.img-bg {
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 495px;
+  height: 400px;
+  width: 495px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-left: 200px;
+}
+@media screen and (max-width: 960px) {
+  .img-bg {
+    margin-left: -40px;
+    width: 100%;
+    background-size: cover;
   }
 }
 .image-content-section {

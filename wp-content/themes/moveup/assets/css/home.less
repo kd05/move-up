@@ -31,6 +31,8 @@ a.btn {
   }
 }
 
+
+
 .link-btn {
   padding: 0 !important;
   font-size: 16px;
@@ -103,6 +105,10 @@ a.btn {
   }
 }
 
+.purple-content-box-student {
+  padding-top: 100px;
+}
+
 .purple-content-box {
   display: flex;
   justify-content: space-between;
@@ -110,6 +116,8 @@ a.btn {
   background: #fff;
   gap: 30px;
   flex-wrap: wrap;
+  margin-bottom: 100px;
+
 
   .card {
     background: #CBBAFF;
@@ -481,6 +489,24 @@ a.btn {
   }
 }
 
+.img-bg {
+
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 495px;
+  height: 400px;
+  width: 495px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-left: 200px;
+
+  @media screen and (max-width: @responsive-960) {
+    margin-left: -40px;
+    width: 100%;
+    background-size: cover;
+  }
+}
+
 .image-content-section {
   margin: 0;
   height: auto;
@@ -488,6 +514,7 @@ a.btn {
   align-items: center;
   gap: 150px;
   padding-bottom: 100px;
+
 
   @media screen and (max-width: @responsive-1280) {
     flex-direction: row;
