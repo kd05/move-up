@@ -1,0 +1,17 @@
+[15-Oct-2024 05:05:04 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\htdocs-projects\moveup\wp-content\themes\moveup\templates\template-about.php:143
+Stack trace:
+#0 D:\htdocs-projects\moveup\wp-includes\template-loader.php(106): include()
+#1 D:\htdocs-projects\moveup\wp-blog-header.php(19): require_once('D:\\htdocs-proje...')
+#2 D:\htdocs-projects\moveup\index.php(17): require('D:\\htdocs-proje...')
+#3 {main}
+  thrown in D:\htdocs-projects\moveup\wp-content\themes\moveup\templates\template-about.php on line 143
+[15-Oct-2024 05:05:34 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\htdocs-projects\moveup\wp-content\themes\moveup\templates\template-about.php:143
+Stack trace:
+#0 D:\htdocs-projects\moveup\wp-includes\template-loader.php(106): include()
+#1 D:\htdocs-projects\moveup\wp-blog-header.php(19): require_once('D:\\htdocs-proje...')
+#2 D:\htdocs-projects\moveup\index.php(17): require('D:\\htdocs-proje...')
+#3 {main}
+  thrown in D:\htdocs-projects\moveup\wp-content\themes\moveup\templates\template-about.php on line 143
+[15-Oct-2024 05:33:38 UTC] PHP Fatal error:  Cannot redeclare career_stories_shortcode() (previously declared in D:\htdocs-projects\moveup\wp-content\themes\moveup\inc\functions\shortcode.php:37) in D:\htdocs-projects\moveup\wp-content\themes\moveup\inc\functions\shortcode.php on line 78
+[15-Oct-2024 05:33:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\htdocs-projects\moveup\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[15-Oct-2024 05:33:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\htdocs-projects\moveup\wp-includes\class-wp-recovery-mode-email-service.php on line 368

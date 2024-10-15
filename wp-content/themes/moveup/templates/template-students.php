@@ -24,7 +24,7 @@ get_header();
 
     <!--Future Today Section Start-->
         <div class="container">
-            <div class="purple-content-box purple-content-box-student">
+            <div class="purple-content-box purple-top100">
                 <div class="card text-black text-center w-100">
                     <h1>Start Your Future Today</h1>
                     <p>Not sure what’s next for you? No worries. We will figure it out together. You’ll start by taking a career assessment then have a one-on-one session with a career coach. In the end, you will understand your strengths and how they map into the modern world of work.</p>
@@ -47,7 +47,7 @@ get_header();
     <!--Get Free Career Today Section End-->
 
     <!--Get Free Career Today Section Start-->
-        <section class="bg-white summer-program-block">
+        <section class="bg-white image-content-top-align">
             <div class="image-content-section">
                 <div class="img-bg" style="background-image: url(<?php echo get_template_directory_uri() ;?>/assets/images/summary-program.png)"> </div>
                 <div class="image-content-block">

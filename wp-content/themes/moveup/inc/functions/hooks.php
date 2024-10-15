@@ -39,6 +39,7 @@ function custom_image_sizes() {
     add_image_size('custom-495', 495, 400, true); // 495 x 400 cropped
     add_image_size('custom-390-220', 390, 220, true); // 390 x 220 cropped
     add_image_size('custom-390-275', 390, 275, true); // 390 x 275 cropped
+    add_image_size('custom-390-361', 390, 361, true); // 390 x 361 cropped
 }
 add_action('after_setup_theme', 'custom_image_sizes');
 

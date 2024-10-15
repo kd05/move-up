@@ -88,70 +88,16 @@ get_header();
 
 
     <?php
-    $career_stories = get_field('career_stories');
+    echo do_shortcode('[career_stories title="Career Stories"]');
     ?>
-    <!--Testimonials Section Start-->
-    <section class="testimonials-block" style="background-image: url(<?php echo get_template_directory_uri() ;?>/assets/images/moveup-gradient-testimonial_2560x1300.jpg)">
-        <div class="container" data-aos="fade-up">
-            <h1>Career Stories</h1>
-            <div class="regular slider">
-
-            <?php foreach ($career_stories as $career_story) {
-                $cs_text = $career_story['text'];
-                $cs_name = $career_story['name'];
-                ?>
-                <div>
-                    <p>“<?php echo $cs_text; ?>”</p>
-                    <div class="small-title">— <?php echo $cs_name; ?></div>
-                </div>
-                <?php } ?>
-            </div>
-        </div>
-    </section>
-    <!--Testimonials Section End-->
-
 
 
 
 
     <?php
-    $featured_posts = get_posts_by_meta('post', 'featured_post', '1', $posts_per_page = -1);
+    // Use the do_shortcode() function to run the 'display_blogs' shortcode
+    echo do_shortcode('[display_blogs posts_per_page="5"]');
     ?>
-    <!--News Section Start-->
-    <section class="bg-white">
-        <div class="container" data-aos="fade-up">
-            <h1>MoveUp News</h1>
-            <div class="news-block">
-                <?php  if ($featured_posts) {
-                    foreach ($featured_posts as $featured_post_id) {
-
-                        $featured_post_title = get_the_title($featured_post_id);
-                        $featured_post_permalink = get_permalink($featured_post_id);
-                        $featured_image = has_post_thumbnail($featured_post_id) ?
-                                            get_the_post_thumbnail_url($featured_post_id, 'custom-390-220') :
-                                            get_default_image();
-                        ?>
-
-                        <div class="card">
-                            <div class="card-img-block">
-<!--                                <span>Filter Tag</span>-->
-                                <img src="<?php echo $featured_image ;?>" />
-                            </div>
-                            <div class="card-content bg-gray">
-                                <h4><?php echo $featured_post_title ;?></h4>
-                                <a href="<?php echo $featured_post_permalink ;?>" class="btn">
-                                    <img src="<?php echo get_template_directory_uri() ;?>/assets/images/arrow.svg" />
-                                </a>
-                            </div>
-                        </div>
-
-                <?php  }
-                }
-                ?>
-            </div>
-        </div>
-    </section>
-    <!--News Section End-->
 
 
 

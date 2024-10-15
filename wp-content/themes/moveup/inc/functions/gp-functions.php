@@ -63,24 +63,138 @@ function top_image_pages_html(){
 
     $top_image_content = get_field('top_image_content');
     $is_purple_container = get_field('is_purple_container');
+    $is_small_height_banner = get_field('is_small_height_banner');
 
     $banner_class = $is_purple_container ? "text-blue inner-banner-caption inner-blue-text-banner"
                 : "text-white inner-banner-caption";
 
     $banner_image = $is_purple_container ?  "" : $banner_image;
 
+    if(!$is_small_height_banner){
     ?>
-    <!--Banner Section Start-->
-    <div class="inner-bg" style="background-image: url(<?php echo esc_url($banner_image); ?>)">
-        <div class="container">
-
-            <div class="<?php echo $banner_class; ?>" data-aos="fade-up">
-                <?php echo $top_image_content; ?>
+        <div class="inner-bg" style="background-image: url(<?php echo esc_url($banner_image); ?>)">
+            <div class="container">
+                <div class="<?php echo $banner_class; ?>" data-aos="fade-up">
+                    <?php echo $top_image_content; ?>
+                </div>
             </div>
+        </div>
+    <?php
+    } else {
+    ?>
+        <div class="inner-bg inner-bg-small"
+             style="background-image: url(<?php echo esc_url($banner_image); ?>)">
+            <div class="container">
+                <div class="<?php echo $banner_class; ?> text-center" data-aos="fade-up">
+                    <?php echo $top_image_content; ?>
+                </div>
+            </div>
+        </div>
+    <?php
+    }
+
+
+}
+
+
+
+function dynamic_page_content(){
+
+    $contents = get_field('dynamic_content');
+//					echo "<pre>"; print_r($contents); echo "</pre>";
+
+    if(is_array($contents)){
+        foreach ($contents as $singleContent) {
+            $content_type = $singleContent['content_type'];
+            $content = $singleContent['content'];
+            $image_content = $singleContent['image_content'];
+
+            ?>
+
+
+                <?php
+                    if($content_type == "content-with-image") {
+
+                        if (is_array($image_content)) {
+                            foreach ($image_content as $image_row) {
+                                $image = $image_row['image'];
+                                $right_content = $image_row['right_content'];
+                                $background = $image_row['background'];
+                                $top_align = $image_row['top_align'];
+                                $top_align_class = $top_align ? ' image-content-top-align ' : '';
+                                ?>
+                                <section class="image-content-section bg-<?php echo $background; ?> <?php echo $top_align_class; ?>">
+                                    <div class="img-bg" style="background-image: url(<?php echo $image ;?>)" data-aos="fade-right"></div>
+                                    <div class="image-content-block" data-aos="fade-left">
+                                        <?php echo $right_content; ?>
+                                    </div>
+                                </section>
+                                <?php
+                            }
+                        }
+
+                    }
+                 ?>
+
+
+
+                <?php if($content_type == "purple-content") {
+
+                        $purple_top_space = $singleContent['purple_top_space'];
+                        $purple_panel_class = $purple_top_space ? " purple-top100 " : "";
+                        ?>
+
+                        <div class="container">
+                            <div class="purple-content-box <?php echo $purple_panel_class; ?>" data-aos="fade-up">
+                                <div class="card text-black text-center w-100">
+                                    <?php echo $content; ?>
+                                </div>
+                            </div>
+                        </div>
+
+                <?php } ?>
+
+
+
+                <?php if($content_type == "shortcode") { ?>
+                        <?php echo $content; ?>
+                <?php } ?>
+
+
+            <?php
+        }
+    }
+
+}
+
+
+
+function single_article_card($post_id) {
+    // Get post details
+    $featured_post_title = get_the_title($post_id);
+    $featured_post_permalink = get_permalink($post_id);
+    $featured_image = has_post_thumbnail($post_id) ?
+        get_the_post_thumbnail_url($post_id, 'custom-390-220') :
+        get_default_image(); // Replace with your fallback image function
+
+    // Output the HTML for the card
+    ?>
+    <div class="card">
+        <div class="card-img-block">
+            <!-- <span>Filter Tag</span>-->
+            <img src="<?php echo esc_url($featured_image); ?>" alt="<?php echo esc_attr($featured_post_title); ?>" />
+        </div>
+        <div class="card-content bg-gray">
+            <h4><?php echo esc_html($featured_post_title); ?></h4>
+            <a href="<?php echo esc_url($featured_post_permalink); ?>" class="btn">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/arrow.svg" alt="Arrow" />
+            </a>
         </div>
     </div>
     <?php
 }
+
+
 
 
 
