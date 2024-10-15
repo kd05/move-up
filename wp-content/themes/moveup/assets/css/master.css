@@ -690,6 +690,7 @@ a.btn:hover {
 }
 .two-box .purple-content-box {
   align-items: normal;
+  margin-bottom: 0px;
 }
 .purple-top100 {
   padding-top: 100px;
@@ -1102,6 +1103,7 @@ a.btn:hover {
 .image-content-section .image-content-block ul {
   margin: 0;
   padding: 0;
+  margin-bottom: 15px;
 }
 .image-content-section .image-content-block ul li {
   list-style: none;
@@ -1109,6 +1111,7 @@ a.btn:hover {
   font-size: 20px;
   line-height: 32px;
   padding-left: 25px;
+  margin-bottom: 5px;
 }
 .image-content-section .image-content-block ul li:after {
   content: "";
@@ -1125,9 +1128,12 @@ a.btn:hover {
 }
 .involved-box {
   flex-wrap: wrap;
+  margin-bottom: 0px;
+  align-items: unset;
 }
 .involved-box .card {
   width: 390px;
+  flex: auto;
 }
 @media screen and (max-width: 1280px) {
   .involved-box .card {

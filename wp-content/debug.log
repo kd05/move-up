@@ -15,3 +15,5 @@ Stack trace:
 [15-Oct-2024 05:33:38 UTC] PHP Fatal error:  Cannot redeclare career_stories_shortcode() (previously declared in D:\htdocs-projects\moveup\wp-content\themes\moveup\inc\functions\shortcode.php:37) in D:\htdocs-projects\moveup\wp-content\themes\moveup\inc\functions\shortcode.php on line 78
 [15-Oct-2024 05:33:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\htdocs-projects\moveup\wp-includes\class-wp-recovery-mode-email-service.php on line 367
 [15-Oct-2024 05:33:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\htdocs-projects\moveup\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[15-Oct-2024 08:16:05 UTC] Automatic updates starting...
+[15-Oct-2024 08:16:06 UTC] Automatic updates complete.

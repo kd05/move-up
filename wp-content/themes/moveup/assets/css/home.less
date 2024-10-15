@@ -102,6 +102,7 @@ a.btn {
 
   .purple-content-box {
     align-items: normal;
+    margin-bottom: 0px;
   }
 }
 
@@ -588,6 +589,10 @@ a.btn {
     ul {
       margin: 0;
       padding: 0;
+      margin-bottom: 15px;
+      //&:last-of-type{
+      //  margin-bottom: 0px;
+      //}
 
       li {
         list-style: none;
@@ -595,6 +600,7 @@ a.btn {
         font-size: 20px;
         line-height: 32px;
         padding-left: 25px;
+        margin-bottom: 5px;
 
         &:after {
           content: "";
@@ -622,9 +628,12 @@ a.btn {
 
 .involved-box {
   flex-wrap: wrap;
+  margin-bottom: 0px;
+  align-items: unset;
 
   .card {
     width: 390px;
+    flex: auto;
 
     @media screen and (max-width: @responsive-1280) {
       width: 31%;
