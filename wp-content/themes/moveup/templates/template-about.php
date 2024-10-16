@@ -55,7 +55,7 @@ $team_members = get_posts([
                                     echo get_the_post_thumbnail($team_member->ID, 'custom-390-361');
                                 } else {
                                     // Placeholder image if no thumbnail is set
-                                    echo '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/placeholder.png" />';
+                                    echo '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/image-not-found.png" />';
                                 }
                                 ?>
                             </div>

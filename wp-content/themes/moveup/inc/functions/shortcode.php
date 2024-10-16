@@ -116,102 +116,45 @@ add_shortcode( 'display_blogs', 'display_blogs_shortcode' );
 
 
 
-
-
-function ewc_form_shortcode( $atts, $content = null ) {
+function display_accordions_shortcode( $atts, $content = null ) {
     $a =  shortcode_atts( array(
+        'title' => 'MoveUp News',
     ), $atts );
     ob_start();
-    ?>
 
-    <!--Form Section Start-->
-    <section class="form-block">
-        <div class="container">
-            <form class="form bg-white">
-                <h1>MoveUp Today</h1>
-                <p>Complete this form to get started. </p>
-                <div class="form-panel">
-                    <div class="form-control">
-                        <label for="">Name *</label>
-                        <input type="text" placeholder="Type name" />
-                    </div>
-                    <div class="form-control">
-                        <label for="">EMail *</label>
-                        <input type="text" placeholder="youremail@email.com" />
-                    </div>
-                    <div class="form-control">
-                        <label for="">Phone *</label>
-                        <input type="text" placeholder="Type number" />
-                    </div>
-                    <div class="form-control">
-                        <label for="">Education</label>
-                        <div class="form-select">
-                            <select class="">
-                                <option value="volvo">Volvo</option>
-                                <option value="saab">Saab</option>
-                                <option value="opel">Opel</option>
-                                <option value="audi">Audi</option>
-                            </select>
+    $accordions = get_field('accordions');
+//    echo "<pre>"; print_r($teams); echo "</pre>";
+    if($accordions){
+        ?>
+        <div class="accordion-section">
+            <div class="accordion-section__inner">
+                <!--  <h1>Title Accordion</h1>-->
+                <?php
+                foreach ($accordions as $team){
+                    $accordion_title = $team['title'];
+                    $accordion_info = $team['info'];
+                    ?>
+                    <div class="common-accordion-container acc-closed" data-aos="fade-up">
+                        <div class="accordion-header">
+                            <div class="acc-title">
+                                <h4><?php echo $accordion_title; ?></h4>
+                            </div>
+                            <div class="acc-arrow">
+                                <img src="<?php echo get_template_directory_uri() ;?>/assets/images/pagination-right.svg" />
+                            </div>
+                        </div>
+                        <div class="accordion-sub">
+                            <?php echo $accordion_info; ?>
                         </div>
                     </div>
-                    <div class="form-control">
-                        <label for="">Location</label>
-                        <div class="form-select">
-                            <select class="">
-                                <option value="volvo">Select your county from drop down</option>
-                                <option value="saab">Saab</option>
-                                <option value="opel">Opel</option>
-                                <option value="audi">Audi</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-control">
-                        <label for="">What can we help you with</label>
-                        <span>Check all that apply</span>
-                        <div class="custom-checkbox">
-                            <label class="checkbox" for="checkbox">
-                                <input type="checkbox" name="color" checked value="checkbox" id="checkbox">
-                                <span class="checkmark"></span>
-                                Lorem Ipsum
-                            </label>
-                            <label class="checkbox" for="checkbox1">
-                                <input type="checkbox" name="color" checked value="checkbox1" id="checkbox1">
-                                <span class="checkmark"></span>
-                                Lorem Ipsum
-                            </label>
-                            <label class="checkbox" for="checkbox2">
-                                <input type="checkbox" name="color" checked value="checkbox2" id="checkbox2">
-                                <span class="checkmark"></span>
-                                Lorem Ipsum
-                            </label>
-                            <label class="checkbox" for="checkbox3">
-                                <input type="checkbox" name="color" checked value="checkbox3" id="checkbox3">
-                                <span class="checkmark"></span>
-                                Lorem Ipsum
-                            </label>
-                            <label class="checkbox" for="checkbox4">
-                                <input type="checkbox" name="color" checked value="checkbox4" id="checkbox4">
-                                <span class="checkmark"></span>
-                                Lorem Ipsum
-                            </label>
-                            <label class="checkbox" for="checkbox5">
-                                <input type="checkbox" name="color" checked value="checkbox5" id="checkbox5">
-                                <span class="checkmark"></span>
-                                Lorem Ipsum
-                            </label>
-                        </div>
-
-                    </div>
-                </div>
-                <button type="button" class="btn">Submit</button>
-            </form>
+                    <?php
+                } ?>
+            </div>
         </div>
-    </section>
-    <!--Form Section End-->
-
-
-    <?php
+    <?php  }
     $output = ob_get_clean();
     return $output;
 }
-add_shortcode( 'ewc_form', 'ewc_form_shortcode' );
+add_shortcode( 'display_accordions', 'display_accordions_shortcode' );
+
+

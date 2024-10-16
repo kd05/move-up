@@ -17,3 +17,6 @@ Stack trace:
 [15-Oct-2024 05:33:38 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\htdocs-projects\moveup\wp-includes\class-wp-recovery-mode-email-service.php on line 368
 [15-Oct-2024 08:16:05 UTC] Automatic updates starting...
 [15-Oct-2024 08:16:06 UTC] Automatic updates complete.
+[15-Oct-2024 15:27:19 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[15-Oct-2024 20:17:18 UTC] Automatic updates starting...
+[15-Oct-2024 20:17:19 UTC] Automatic updates complete.

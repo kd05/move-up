@@ -9,6 +9,7 @@ require_once(get_template_directory() . '/inc/functions/menus.php');
 require_once(get_template_directory() . '/inc/functions/hooks.php');
 require_once(get_template_directory() . '/inc/functions/gp-functions.php');
 require_once(get_template_directory() . '/inc/functions/shortcode.php');
+require_once(get_template_directory() . '/inc/functions/forms-shortcode.php');
 
 
 /***************************************************************

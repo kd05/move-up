@@ -22,5 +22,4 @@ dynamic_page_content();
 
 
 
-
 <?php get_footer(); ?>

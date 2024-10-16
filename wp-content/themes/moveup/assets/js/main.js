@@ -26,6 +26,22 @@ jQuery(document).ready(function ($) {
 
 
 
+
+    /*************************************************
+     *          Accordion
+     ************************************************/
+    const accordion_init = () => {
+        $(".accordion-header").on("click", function() {
+            var section = $(this).parent();
+            // section.find(".accordion-sub").slideToggle();
+            section.toggleClass( "acc-open" );
+        });
+    }
+    accordion_init();
+
+
+
+
     /****************************************************
    *             Modal
    ***************************************************/

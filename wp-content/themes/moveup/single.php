@@ -9,9 +9,12 @@ if (have_posts()) :
         // Variables to store post details
         $article_id = get_the_ID();
         $article_title = get_the_title();
-        $article_author = get_the_author();
-        $article_date = get_the_date();
-//        $article_content = get_the_content();
+//        $article_author = get_the_author();
+//        $article_date = get_the_date();
+
+        $article_author = get_field('article_author') ?
+                    get_field('article_author') : 'N/A';
+        $article_date = get_field('article_date');
         $article_content = wpautop(get_the_content());
 //        $article_permalink = get_permalink(get_option('page_for_posts'));
         $article_permalink = site_url().'/bulletin';

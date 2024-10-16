@@ -1,0 +1,156 @@
+
+.accordion-section{
+  .accordion-section__inner{
+    .width-center(1290px, 100px 30px);
+
+    .common-accordion-container{
+      .accordion-header{
+        .flex-container();
+        .justify-content(space-between);
+        .align-items(center);
+        padding: 25px 10px 25px 0;
+        cursor: pointer;
+        border-top: 2px solid #040040;
+        .trans(0.3s);
+        .acc-title{
+          .flex-container(row, wrap);
+          .align-items(flex-end);
+          h3,h4{
+            padding-right: 30px;
+            line-height: 100%;
+            margin-bottom: 0px;
+          }
+        }
+        .acc-arrow{
+          .trans(0.3s);
+          min-width: 38px;
+          img{
+            display: block;
+            padding: 16px 20px;
+            background: #8400FF;
+            border-radius: 18px;
+          }
+        }
+      }
+      .accordion-sub{
+        padding: 0px;
+        opacity: 0;
+        height: 0px;
+        overflow: hidden;
+        .trans(0.4s);
+        max-width: 890px;
+        width: 100%;
+
+        .para-style(
+          @line-height: 170%,
+          @font-size: 21px,
+          @margin-bottom: 15px
+        );
+        a{
+          color: #040040;
+        }
+
+
+        /* Styling the ol list to use numbers */
+        ol {
+          list-style-type: decimal;
+          margin-left: 10px;
+          margin-bottom: 20px;
+          padding-left: 10px;
+          counter-reset: custom-counter; /* Initialize custom counter */
+
+          li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            counter-increment: custom-counter;
+          }
+        }
+
+
+      }
+
+      &.acc-open{
+        .accordion-header{
+          border-bottom: 2px solid #040040;
+          .acc-arrow{
+            transform: rotate(90deg);
+          }
+        }
+        .accordion-sub{
+          padding: 60px 0;
+          height: auto;
+          opacity: 1;
+        }
+      }
+
+      &:last-child{
+        .accordion-header{
+          border-bottom: 2px solid #040040;
+        }
+      }
+
+      &:not(.acc-open) {
+        &:hover{
+          .accordion-header{
+            .acc-arrow{
+              transform: translateX(10px);
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
+
+@media screen and (max-width: @responsive-840){
+
+  .accordion-section {
+    .accordion-section__inner {
+
+      padding: 80px 30px;
+
+      .common-accordion-container {
+        .accordion-header {
+          .acc-title{
+            *{
+              width: 100%;
+            }
+          }
+
+          .acc-arrow {
+            img{
+              padding: 12px 16px;
+            }
+          }
+
+        }
+
+        .accordion-sub{
+          .para-style(
+            @line-height: 165%,
+            @font-size: 18px
+          );
+
+          ol{
+            li{
+              font-size: 16px;
+            }
+          }
+
+        }
+
+        &.acc-open {
+          .accordion-sub{
+            padding: 50px 0;
+          }
+        }
+
+      }
+    }
+  }
+
+}
